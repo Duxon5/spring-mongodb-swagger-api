@@ -7,13 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.kazale.api.documents.Cliente;
-//import com.kazale.api.repositories.ClienteRepository;
+import com.kazale.api.repositories.ClienteRepository;
 
 @SpringBootApplication
 public class P20Application {
 	
-	//@Autowired
-	//private ClienteRepository repository;
+	@Autowired
+	private ClienteRepository repository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(P20Application.class, args);
@@ -22,12 +22,12 @@ public class P20Application {
 	@Bean
 	public CommandLineRunner commandLineRunner() {
 		return args -> {
-			//testeMongoDB();
+			testeMongoDB();
 		};
 	}
 	
 	private void testeMongoDB() {
-		/*repository.deleteAll();
+		repository.deleteAll();
 
 		repository.save(new Cliente("Alice", 20));
 		repository.save(new Cliente("João", 30));
@@ -45,6 +45,6 @@ public class P20Application {
 		
 		System.out.println("Clientes com idade entre 18 and 35:");
 		System.out.println("--------------------------------");
-		repository.findByIdadeBetween(18, 35).forEach(System.out::println);*/
+		repository.findByIdadeBetween(18, 35).forEach(System.out::println);
 	}
 }

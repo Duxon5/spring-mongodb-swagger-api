@@ -1,4 +1,4 @@
-/*package com.kazale.api.repositories;
+package com.kazale.api.repositories;
 
 import java.util.List;
 
@@ -15,4 +15,3 @@ public interface ClienteRepository extends MongoRepository<Cliente, String> {
 	List<Cliente> findByIdadeBetween(int idadeInicial, int idadeFinal);
 
 }
-*/
